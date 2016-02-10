@@ -33,7 +33,6 @@
 		9E7D2A741C6A102A0089227F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E7D2A7D1C6A110A0089227F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		9E7D2A861C6A126A0089227F /* AES256CBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AES256CBC.swift; path = sources/AES256CBC.swift; sourceTree = "<group>"; };
-		9E7D2A891C6A15930089227F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AES256CBC/Info.plist; sourceTree = "<group>"; };
 		9E7D2A8D1C6A17E90089227F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9E7D2A8F1C6A184C0089227F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +62,6 @@
 				9E7D2A7D1C6A110A0089227F /* .gitignore */,
 				9E7D2A8D1C6A17E90089227F /* LICENSE */,
 				9E7D2A8F1C6A184C0089227F /* README.md */,
-				9E7D2A891C6A15930089227F /* Info.plist */,
 				9E195B071C6B396700D924CB /* Info.plist */,
 				9E7D2A851C6A123A0089227F /* sources */,
 				9E7D2A711C6A102A0089227F /* AES256CBCTests */,
