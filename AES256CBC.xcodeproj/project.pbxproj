@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E195B081C6B396700D924CB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E195B071C6B396700D924CB /* Info.plist */; };
 		9E7D2A6E1C6A102A0089227F /* AES256CBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7D2A631C6A102A0089227F /* AES256CBC.framework */; };
 		9E7D2A731C6A102A0089227F /* AES256CBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A721C6A102A0089227F /* AES256CBCTests.swift */; };
 		9E7D2A871C6A126A0089227F /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E195B071C6B396700D924CB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E7D2A631C6A102A0089227F /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7D2A6D1C6A102A0089227F /* AES256CBCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AES256CBCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7D2A721C6A102A0089227F /* AES256CBCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES256CBCTests.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				9E7D2A8D1C6A17E90089227F /* LICENSE */,
 				9E7D2A8F1C6A184C0089227F /* README.md */,
 				9E7D2A891C6A15930089227F /* Info.plist */,
+				9E195B071C6B396700D924CB /* Info.plist */,
 				9E7D2A851C6A123A0089227F /* sources */,
 				9E7D2A711C6A102A0089227F /* AES256CBCTests */,
 				9E7D2A641C6A102A0089227F /* Products */,
@@ -184,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E195B081C6B396700D924CB /* Info.plist in Resources */,
 				9E7D2A8E1C6A17FB0089227F /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,7 +327,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AES256CBC/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
@@ -341,7 +345,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AES256CBC/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;

@@ -6,10 +6,10 @@
 //  Copyright © 2016 SwiftyBeaver. All rights reserved.
 //
 
-// ========================================================================================
+// =================================================================================================
 // ATTENTION:
-// Please mind the different copyright statement of the class AESCipher further down below!
-// ========================================================================================
+// Please read the copyright statement of the source code by Marcin Krzyżanowski further down below
+// =================================================================================================
 
 import Foundation
 
