@@ -18,7 +18,7 @@ class AES256CBCTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
-
+    
     func testEncryptDecryptStringCycle() {
         // encrypt. password must be 32 chars long
         let str = AES256CBC.randomText(32)
@@ -45,7 +45,7 @@ class AES256CBCTests: XCTestCase {
         var password = ""
         var encrypted = AES256CBC.encryptString(str, password: password)
         XCTAssertNil(encrypted)
-
+        
         // str must be longer than 0 characters
         str = ""
         password = AES256CBC.randomText(32)
@@ -115,7 +115,7 @@ class AES256CBCTests: XCTestCase {
         XCTAssertNil(text.rangeOfString(" "))
         XCTAssertNil(text2.rangeOfString(" "))
     }
-
+    
     func testGeneratePassword() {
         let pw = AES256CBC.generatePassword()
         let pw2 = AES256CBC.generatePassword()
