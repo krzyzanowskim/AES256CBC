@@ -1,6 +1,6 @@
 # AES256CBC
 
-The **most convenient**, simple & lightweight **Swift 2** library to encrypt / decrypt a string with **AES-256 CBC** encryption.
+The **most convenient**, simple & lightweight **Swift 2** framework to encrypt / decrypt a string with **AES-256 CBC** encryption.
 
 AES256CBC is meant as simple, stand-alone file to bring [AES-256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) [Cipher Block Chaining](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Cipher_Block_Chaining_.28CBC.29) encryption to any Swift 2 powered app without any friction or learning curve. It is used in multiple projects of [SwiftyBeaver](https://github.com/SwiftyBeaver) and was developed in cooperation with Marcin Krzyżanowski from [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift).
 
@@ -13,13 +13,67 @@ AES256CBC is meant as simple, stand-alone file to bring [AES-256](https://en.wik
 5. Built-in generating of compatible 32 character password
 6. Automatic string padding
 6. Automatic handling & embedding of a **random initialisation vector**
-7. Developed in cooperation with Marcin Krzyżanowski, creator of the famous [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift) project
    
 Please **follow [SwiftyBeaver on Twitter](https://twitter.com/SwiftyBeaver)** to stay up-to-date on new versions.
 
 ## Requirements
 
-- Swift 2 compatible app
+- iOS 8.0+ / Mac OS X 10.9+
+- Xcode 7
+
+## Installation
+
+#### Platform & Installation Support
+
+
+
+| \                                        | iOS 8+             | OSX 10.9+          | watchOS 2+         | tvOS 9+            |
+| ---------------------------------------- | ------------------ | ------------------ | ------------------ | ------------------ |
+| [Swift Package Manager](https://swift.org/package-manager/) | <center>✅</center> | <center>✅</center> | <center>✅</center> | <center>✅</center> |
+| [Carthage](https://github.com/Carthage/Carthage) | <center>✅</center> | <center>✅</center> | <center>✅</center> | <center>✅</center> |
+| [CocoaPods](https://cocoapods.org)       | <center>✅</center> | <center>✅</center> | <center>✅</center> | <center>✅</center> |
+| Download                                 | <center>✅</center> | <center>✅</center> | <center>✅</center> | <center>✅</center> |
+
+For installation details please see the next points.
+
+#### via Carthage
+
+You can use [Carthage](https://github.com/Carthage/Carthage) to install AES256CBC by adding that to your Cartfile:
+
+``` 
+github "SwiftyBeaver/AES256CBC"
+```
+
+#### via CocoaPods
+
+To use [CocoaPods](https://cocoapods.org) just add this to your Podfile:
+
+``` 
+pod 'AES256CBC'
+```
+
+#### via Swift Package Manager
+
+To use AES256CBC as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
+
+``` Swift
+import PackageDescription
+
+let package = Package(
+name: "HelloWorld",
+dependencies: [
+.Package(url: "https://github.com/SwiftyBeaver/AES256CBC.git", majorVersion: 0)
+]
+)
+```
+
+#### or Download
+
+1. Download the latest release zip from [here](https://github.com/SwiftyBeaver/AES256CBC/releases)
+2. Drag & drop the `/sources` folder into your project (make sure "Copy items if needed" is checked)
+3. Rename the "sources" group to "AES256CBC" if you'd like
+
+Note: You don't have to `import AES256CBC` if you install this way.
 
 
 ## Usage

@@ -12,6 +12,10 @@
 		9E7D2A871C6A126A0089227F /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
 		9E7D2A881C6A126A0089227F /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
 		9E7D2A8E1C6A17FB0089227F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9E7D2A8D1C6A17E90089227F /* LICENSE */; };
+		9EBCC00A1CA175F700F634FF /* AES256CBC.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9EBCC0091CA175E500F634FF /* AES256CBC.podspec */; };
+		9EBCC00B1CA175F800F634FF /* AES256CBC.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9EBCC0091CA175E500F634FF /* AES256CBC.podspec */; };
+		9EBCC00D1CA175F900F634FF /* AES256CBC.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9EBCC0091CA175E500F634FF /* AES256CBC.podspec */; };
+		9EBCC00E1CA175F900F634FF /* AES256CBC.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9EBCC0091CA175E500F634FF /* AES256CBC.podspec */; };
 		9EFC2E1F1C6B8AB900435F84 /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
 		9EFC2E241C6B8AB900435F84 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9E7D2A8D1C6A17E90089227F /* LICENSE */; };
 		9EFC2E2C1C6B8ADA00435F84 /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
@@ -40,6 +44,7 @@
 		9E7D2A861C6A126A0089227F /* AES256CBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AES256CBC.swift; path = sources/AES256CBC.swift; sourceTree = "<group>"; };
 		9E7D2A8D1C6A17E90089227F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9E7D2A8F1C6A184C0089227F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9EBCC0091CA175E500F634FF /* AES256CBC.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AES256CBC.podspec; sourceTree = "<group>"; };
 		9EFC2E281C6B8AB900435F84 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EFC2E351C6B8ADA00435F84 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EFC2E421C6B8AEB00435F84 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				9E7D2A7D1C6A110A0089227F /* .gitignore */,
+				9EBCC0091CA175E500F634FF /* AES256CBC.podspec */,
 				9E7D2A8D1C6A17E90089227F /* LICENSE */,
 				9E7D2A8F1C6A184C0089227F /* README.md */,
 				9E195B071C6B396700D924CB /* Info.plist */,
@@ -298,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E7D2A8E1C6A17FB0089227F /* LICENSE in Resources */,
+				9EBCC00A1CA175F700F634FF /* AES256CBC.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EFC2E241C6B8AB900435F84 /* LICENSE in Resources */,
+				9EBCC00B1CA175F800F634FF /* AES256CBC.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EFC2E311C6B8ADA00435F84 /* LICENSE in Resources */,
+				9EBCC00D1CA175F900F634FF /* AES256CBC.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EFC2E3E1C6B8AEB00435F84 /* LICENSE in Resources */,
+				9EBCC00E1CA175F900F634FF /* AES256CBC.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
