@@ -90,7 +90,7 @@ let password = AES256CBC.generatePassword()  // returns random 32 char string
 let encrypted = AES256CBC.encryptString(str, password: password)
 
 // decrypt AES-256 CBC encrypted string
-let decrypted = AES256CBC.decryptString(str, password: password)
+let decrypted = AES256CBC.decryptString(encrypted!, password: password)
 ```
 
 ## FAQs
