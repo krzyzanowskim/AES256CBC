@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  AES256 is the most convenient, simple & leightweight Swift 2 framework to encrypt & decrypt a string with AES-256 CBC encryption. It is written in Swift 2 and actively maintained by SwiftyBeaver (Twitter: @SwiftyBeaver).
+  AES256 is the most convenient, simple & leightweight Swift 2 framework to encrypt & decrypt a string with AES256-CBC encryption. It is written in Swift 2 and actively maintained by SwiftyBeaver (Twitter: @SwiftyBeaver).
                    DESC
 
   s.homepage     = "https://github.com/SwiftyBeaver/AES256CBC"
@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = "2.0"
   s.tvos.deployment_target = "9.0"
   s.osx.deployment_target = "10.9"
-  s.source       = { :git => "https://github.com/SwiftyBeaver/AES256CBC", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/SwiftyBeaver/AES256CBC.git", :tag => "0.1.0" }
   s.source_files  = "sources"
 end
