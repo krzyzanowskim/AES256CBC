@@ -13,15 +13,9 @@
 		9E7D2A881C6A126A0089227F /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
 		9E7D2A8E1C6A17FB0089227F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9E7D2A8D1C6A17E90089227F /* LICENSE */; };
 		9EBCC00A1CA175F700F634FF /* AES256CBC.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9EBCC0091CA175E500F634FF /* AES256CBC.podspec */; };
-		9EBCC00B1CA175F800F634FF /* AES256CBC.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9EBCC0091CA175E500F634FF /* AES256CBC.podspec */; };
-		9EBCC00D1CA175F900F634FF /* AES256CBC.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9EBCC0091CA175E500F634FF /* AES256CBC.podspec */; };
-		9EBCC00E1CA175F900F634FF /* AES256CBC.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9EBCC0091CA175E500F634FF /* AES256CBC.podspec */; };
-		9EFC2E1F1C6B8AB900435F84 /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
-		9EFC2E241C6B8AB900435F84 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9E7D2A8D1C6A17E90089227F /* LICENSE */; };
-		9EFC2E2C1C6B8ADA00435F84 /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
-		9EFC2E311C6B8ADA00435F84 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9E7D2A8D1C6A17E90089227F /* LICENSE */; };
-		9EFC2E391C6B8AEB00435F84 /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
-		9EFC2E3E1C6B8AEB00435F84 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9E7D2A8D1C6A17E90089227F /* LICENSE */; };
+		AC3AC2E61CA1B10100BBFC58 /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
+		AC3AC2E71CA1B10100BBFC58 /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
+		AC3AC2E81CA1B10200BBFC58 /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,9 +39,9 @@
 		9E7D2A8D1C6A17E90089227F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9E7D2A8F1C6A184C0089227F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9EBCC0091CA175E500F634FF /* AES256CBC.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AES256CBC.podspec; sourceTree = "<group>"; };
-		9EFC2E281C6B8AB900435F84 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EFC2E351C6B8ADA00435F84 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EFC2E421C6B8AEB00435F84 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC3AC2751CA1AB5D00BBFC58 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC3AC2821CA1ABC200BBFC58 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC3AC28F1CA1AC3900BBFC58 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,21 +60,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E201C6B8AB900435F84 /* Frameworks */ = {
+		AC3AC2711CA1AB5D00BBFC58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E2D1C6B8ADA00435F84 /* Frameworks */ = {
+		AC3AC27E1CA1ABC200BBFC58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E3A1C6B8AEB00435F84 /* Frameworks */ = {
+		AC3AC28B1CA1AC3900BBFC58 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -109,9 +103,9 @@
 			children = (
 				9E7D2A631C6A102A0089227F /* AES256CBC.framework */,
 				9E7D2A6D1C6A102A0089227F /* AES256CBCTests.xctest */,
-				9EFC2E281C6B8AB900435F84 /* AES256CBC.framework */,
-				9EFC2E351C6B8ADA00435F84 /* AES256CBC.framework */,
-				9EFC2E421C6B8AEB00435F84 /* AES256CBC.framework */,
+				AC3AC2751CA1AB5D00BBFC58 /* AES256CBC.framework */,
+				AC3AC2821CA1ABC200BBFC58 /* AES256CBC.framework */,
+				AC3AC28F1CA1AC3900BBFC58 /* AES256CBC.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,21 +137,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E211C6B8AB900435F84 /* Headers */ = {
+		AC3AC2721CA1AB5D00BBFC58 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E2E1C6B8ADA00435F84 /* Headers */ = {
+		AC3AC27F1CA1ABC200BBFC58 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E3B1C6B8AEB00435F84 /* Headers */ = {
+		AC3AC28C1CA1AC3900BBFC58 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -204,33 +198,32 @@
 			productReference = 9E7D2A6D1C6A102A0089227F /* AES256CBCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9EFC2E1D1C6B8AB900435F84 /* AES256CBC (OSX) */ = {
+		AC3AC2741CA1AB5D00BBFC58 /* AES256CBC (watchOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9EFC2E251C6B8AB900435F84 /* Build configuration list for PBXNativeTarget "AES256CBC (OSX)" */;
+			buildConfigurationList = AC3AC27C1CA1AB5D00BBFC58 /* Build configuration list for PBXNativeTarget "AES256CBC (watchOS)" */;
 			buildPhases = (
-				9EFC2E1E1C6B8AB900435F84 /* Sources */,
-				9EFC2E201C6B8AB900435F84 /* Frameworks */,
-				9EFC2E211C6B8AB900435F84 /* Headers */,
-				9EFC2E221C6B8AB900435F84 /* Resources */,
-				9EBCC0051CA1703400F634FF /* ShellScript */,
+				AC3AC2701CA1AB5D00BBFC58 /* Sources */,
+				AC3AC2711CA1AB5D00BBFC58 /* Frameworks */,
+				AC3AC2721CA1AB5D00BBFC58 /* Headers */,
+				AC3AC2731CA1AB5D00BBFC58 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "AES256CBC (OSX)";
-			productName = AES256CBC;
-			productReference = 9EFC2E281C6B8AB900435F84 /* AES256CBC.framework */;
+			name = "AES256CBC (watchOS)";
+			productName = fs;
+			productReference = AC3AC2751CA1AB5D00BBFC58 /* AES256CBC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9EFC2E2A1C6B8ADA00435F84 /* AES256CBC (tvOS) */ = {
+		AC3AC2811CA1ABC200BBFC58 /* AES256CBC (tvOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9EFC2E321C6B8ADA00435F84 /* Build configuration list for PBXNativeTarget "AES256CBC (tvOS)" */;
+			buildConfigurationList = AC3AC2871CA1ABC200BBFC58 /* Build configuration list for PBXNativeTarget "AES256CBC (tvOS)" */;
 			buildPhases = (
-				9EFC2E2B1C6B8ADA00435F84 /* Sources */,
-				9EFC2E2D1C6B8ADA00435F84 /* Frameworks */,
-				9EFC2E2E1C6B8ADA00435F84 /* Headers */,
-				9EFC2E2F1C6B8ADA00435F84 /* Resources */,
+				AC3AC27D1CA1ABC200BBFC58 /* Sources */,
+				AC3AC27E1CA1ABC200BBFC58 /* Frameworks */,
+				AC3AC27F1CA1ABC200BBFC58 /* Headers */,
+				AC3AC2801CA1ABC200BBFC58 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -238,25 +231,25 @@
 			);
 			name = "AES256CBC (tvOS)";
 			productName = AES256CBC;
-			productReference = 9EFC2E351C6B8ADA00435F84 /* AES256CBC.framework */;
+			productReference = AC3AC2821CA1ABC200BBFC58 /* AES256CBC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9EFC2E371C6B8AEB00435F84 /* AES256CBC (watchOS) copy */ = {
+		AC3AC28E1CA1AC3900BBFC58 /* AES256CBC (OSX) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9EFC2E3F1C6B8AEB00435F84 /* Build configuration list for PBXNativeTarget "AES256CBC (watchOS) copy" */;
+			buildConfigurationList = AC3AC2941CA1AC3900BBFC58 /* Build configuration list for PBXNativeTarget "AES256CBC (OSX)" */;
 			buildPhases = (
-				9EFC2E381C6B8AEB00435F84 /* Sources */,
-				9EFC2E3A1C6B8AEB00435F84 /* Frameworks */,
-				9EFC2E3B1C6B8AEB00435F84 /* Headers */,
-				9EFC2E3C1C6B8AEB00435F84 /* Resources */,
+				AC3AC28A1CA1AC3900BBFC58 /* Sources */,
+				AC3AC28B1CA1AC3900BBFC58 /* Frameworks */,
+				AC3AC28C1CA1AC3900BBFC58 /* Headers */,
+				AC3AC28D1CA1AC3900BBFC58 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "AES256CBC (watchOS) copy";
+			name = "AES256CBC (OSX)";
 			productName = AES256CBC;
-			productReference = 9EFC2E421C6B8AEB00435F84 /* AES256CBC.framework */;
+			productReference = AC3AC28F1CA1AC3900BBFC58 /* AES256CBC.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -275,6 +268,15 @@
 					9E7D2A6C1C6A102A0089227F = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					AC3AC2741CA1AB5D00BBFC58 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					AC3AC2811CA1ABC200BBFC58 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					AC3AC28E1CA1AC3900BBFC58 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 				};
 			};
 			buildConfigurationList = 9E7D2A5D1C6A102A0089227F /* Build configuration list for PBXProject "AES256CBC" */;
@@ -291,9 +293,9 @@
 			targets = (
 				9E7D2A621C6A102A0089227F /* AES256CBC (iOS) */,
 				9E7D2A6C1C6A102A0089227F /* AES256CBCTests */,
-				9EFC2E1D1C6B8AB900435F84 /* AES256CBC (OSX) */,
-				9EFC2E2A1C6B8ADA00435F84 /* AES256CBC (tvOS) */,
-				9EFC2E371C6B8AEB00435F84 /* AES256CBC (watchOS) copy */,
+				AC3AC2741CA1AB5D00BBFC58 /* AES256CBC (watchOS) */,
+				AC3AC2811CA1ABC200BBFC58 /* AES256CBC (tvOS) */,
+				AC3AC28E1CA1AC3900BBFC58 /* AES256CBC (OSX) */,
 			);
 		};
 /* End PBXProject section */
@@ -315,30 +317,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E221C6B8AB900435F84 /* Resources */ = {
+		AC3AC2731CA1AB5D00BBFC58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFC2E241C6B8AB900435F84 /* LICENSE in Resources */,
-				9EBCC00B1CA175F800F634FF /* AES256CBC.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E2F1C6B8ADA00435F84 /* Resources */ = {
+		AC3AC2801CA1ABC200BBFC58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFC2E311C6B8ADA00435F84 /* LICENSE in Resources */,
-				9EBCC00D1CA175F900F634FF /* AES256CBC.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E3C1C6B8AEB00435F84 /* Resources */ = {
+		AC3AC28D1CA1AC3900BBFC58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFC2E3E1C6B8AEB00435F84 /* LICENSE in Resources */,
-				9EBCC00E1CA175F900F634FF /* AES256CBC.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,19 +342,6 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		9EBCC0041CA1702D00F634FF /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint autocorrect\n  swiftlint\nfi";
-		};
-		9EBCC0051CA1703400F634FF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -391,27 +374,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E1E1C6B8AB900435F84 /* Sources */ = {
+		AC3AC2701CA1AB5D00BBFC58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFC2E1F1C6B8AB900435F84 /* AES256CBC.swift in Sources */,
+				AC3AC2E61CA1B10100BBFC58 /* AES256CBC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E2B1C6B8ADA00435F84 /* Sources */ = {
+		AC3AC27D1CA1ABC200BBFC58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFC2E2C1C6B8ADA00435F84 /* AES256CBC.swift in Sources */,
+				AC3AC2E71CA1B10100BBFC58 /* AES256CBC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9EFC2E381C6B8AEB00435F84 /* Sources */ = {
+		AC3AC28A1CA1AC3900BBFC58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFC2E391C6B8AEB00435F84 /* AES256CBC.swift in Sources */,
+				AC3AC2E81CA1B10200BBFC58 /* AES256CBC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,128 +562,132 @@
 			};
 			name = Release;
 		};
-		9EFC2E261C6B8AB900435F84 /* Debug */ = {
+		AC3AC27A1CA1AB5D00BBFC58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
+				PRODUCT_NAME = AES256CBC;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		AC3AC27B1CA1AB5D00BBFC58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
+				PRODUCT_NAME = AES256CBC;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		AC3AC2881CA1ABC200BBFC58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
+				PRODUCT_NAME = AES256CBC;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		AC3AC2891CA1ABC200BBFC58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
+				PRODUCT_NAME = AES256CBC;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		AC3AC2951CA1AC3900BBFC58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
-				PRODUCT_MODULE_NAME = AES256CBC;
 				PRODUCT_NAME = AES256CBC;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
-		9EFC2E271C6B8AB900435F84 /* Release */ = {
+		AC3AC2961CA1AC3900BBFC58 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
-				PRODUCT_MODULE_NAME = AES256CBC;
 				PRODUCT_NAME = AES256CBC;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "i386 x86_64";
-			};
-			name = Release;
-		};
-		9EFC2E331C6B8ADA00435F84 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
-				PRODUCT_MODULE_NAME = AES256CBC;
-				PRODUCT_NAME = AES256CBC;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VALID_ARCHS = arm64;
-			};
-			name = Debug;
-		};
-		9EFC2E341C6B8ADA00435F84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
-				PRODUCT_MODULE_NAME = AES256CBC;
-				PRODUCT_NAME = AES256CBC;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = arm64;
-			};
-			name = Release;
-		};
-		9EFC2E401C6B8AEB00435F84 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "AES256CBC (watchOS) copy-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
-				PRODUCT_MODULE_NAME = AES256CBC;
-				PRODUCT_NAME = AES256CBC;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VALID_ARCHS = armv7k;
-			};
-			name = Debug;
-		};
-		9EFC2E411C6B8AEB00435F84 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "AES256CBC (watchOS) copy-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBC;
-				PRODUCT_MODULE_NAME = AES256CBC;
-				PRODUCT_NAME = AES256CBC;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
-				VALID_ARCHS = armv7k;
 			};
 			name = Release;
 		};
@@ -734,29 +721,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9EFC2E251C6B8AB900435F84 /* Build configuration list for PBXNativeTarget "AES256CBC (OSX)" */ = {
+		AC3AC27C1CA1AB5D00BBFC58 /* Build configuration list for PBXNativeTarget "AES256CBC (watchOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9EFC2E261C6B8AB900435F84 /* Debug */,
-				9EFC2E271C6B8AB900435F84 /* Release */,
+				AC3AC27A1CA1AB5D00BBFC58 /* Debug */,
+				AC3AC27B1CA1AB5D00BBFC58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9EFC2E321C6B8ADA00435F84 /* Build configuration list for PBXNativeTarget "AES256CBC (tvOS)" */ = {
+		AC3AC2871CA1ABC200BBFC58 /* Build configuration list for PBXNativeTarget "AES256CBC (tvOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9EFC2E331C6B8ADA00435F84 /* Debug */,
-				9EFC2E341C6B8ADA00435F84 /* Release */,
+				AC3AC2881CA1ABC200BBFC58 /* Debug */,
+				AC3AC2891CA1ABC200BBFC58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9EFC2E3F1C6B8AEB00435F84 /* Build configuration list for PBXNativeTarget "AES256CBC (watchOS) copy" */ = {
+		AC3AC2941CA1AC3900BBFC58 /* Build configuration list for PBXNativeTarget "AES256CBC (OSX)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9EFC2E401C6B8AEB00435F84 /* Debug */,
-				9EFC2E411C6B8AEB00435F84 /* Release */,
+				AC3AC2951CA1AC3900BBFC58 /* Debug */,
+				AC3AC2961CA1AC3900BBFC58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
