@@ -26,7 +26,7 @@ included: # paths to include during linting. `--path` is ignored if present.
 excluded: # paths to ignore during linting. Takes precedence over `included`.
 - Carthage
 
-line_length: 131
+line_length: 121
 
 function_parameter_count:
   warning: 10
