@@ -1,13 +1,15 @@
-# AES256CBC
+# AES256CBC Encryption for Swift 2 & 3
 
-The **most convenient**, simple & lightweight **Swift 2** framework to encrypt / decrypt a string with **AES-256 CBC** encryption.
+The **most convenient** & lightweight **AES256 Encryption Framework for Swift 3** ever! For Swift 2 use tag 0.1.1
 
-AES256CBC is meant as simple, stand-alone file to bring [AES-256](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) [Cipher Block Chaining](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Cipher_Block_Chaining_.28CBC.29) encryption to any Swift 2 powered app without any friction or learning curve. It is used in multiple projects of [SwiftyBeaver](https://github.com/SwiftyBeaver) and was developed in cooperation with Marcin Krzyżanowski from [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift).
+[![Language Swift 3](https://img.shields.io/badge/Language-Swift%202%20&%203-orange.svg)](https://developer.apple.com/swift) [![Travis Build Status](https://travis-ci.org/SwiftyBeaver/AES256CBC.svg)](https://travis-ci.org/SwiftyBeaver/AES256CBC) [![Slack Status](https://slack.swiftybeaver.com/badge.svg)](https://slack.swiftybeaver.com) 
+
+----
 
 ## Unique Feature Set
 
-1. Just **a single file** in pure Swift 2 source code
-2. Runs **natively** on iOS, Mac OSX, tvOS & watchOS
+1. Just **a single file** in pure Swift 2 & 3 source code
+2. Runs **natively** on iOS, macOS, tvOS & watchOS
 3. No additional dependencies or header files
 4. Maximum **convenience** for encrypting / decrypting of strings
 5. Built-in generating of compatible 32 character password
@@ -18,29 +20,17 @@ Please **follow [SwiftyBeaver on Twitter](https://twitter.com/SwiftyBeaver)** to
 
 ## Requirements
 
-- iOS 8.0+ / Mac OS X 10.9+
-- Xcode 7
+- iOS 8.0+, macOS X 10.9+, tvOS 9+, watchOS 2+
+- Xcode 7+
 
 ## Installation
 
-#### Platform & Installation Support
-
-
-
-| \                                        | iOS 8+             | OSX 10.9+          | watchOS 2+         | tvOS 9+            |
-| ---------------------------------------- | ------------------ | ------------------ | ------------------ | ------------------ |
-| [Swift Package Manager](https://swift.org/package-manager/) | <center>✅</center> | <center>✅</center> | <center>✅</center> | <center>✅</center> |
-| [Carthage](https://github.com/Carthage/Carthage) | <center>✅</center> | <center>✅</center> | <center>✅</center> | <center>✅</center> |
-| [CocoaPods](https://cocoapods.org)       | <center>✅</center> | <center>✅</center> | <center>✅</center> | <center>✅</center> |
-| Download                                 | <center>✅</center> | <center>✅</center> | <center>✅</center> | <center>✅</center> |
-
-For installation details please see the next points.
 
 #### via Carthage
 
 You can use [Carthage](https://github.com/Carthage/Carthage) to install AES256CBC by adding that to your Cartfile:
 
-``` 
+``` swift
 github "SwiftyBeaver/AES256CBC"
 ```
 
@@ -48,23 +38,16 @@ github "SwiftyBeaver/AES256CBC"
 
 To use [CocoaPods](https://cocoapods.org) just add this to your Podfile:
 
-``` 
+``` swift
 pod 'AES256CBC'
 ```
 
 #### via Swift Package Manager
 
-To use AES256CBC as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following in your Package.swift file.
+To use AES256CBC as a [Swift Package Manager](https://swift.org/package-manager/) package just add the following to your Package.swift file’s dependencies.
 
-``` Swift
-import PackageDescription
-
-let package = Package(
-name: "HelloWorld",
-dependencies: [
-.Package(url: "https://github.com/SwiftyBeaver/AES256CBC.git", majorVersion: 0)
-]
-)
+``` swift
+.Package(url: "https://github.com/SwiftyBeaver/AES256CBC.git")
 ```
 
 #### or Download
@@ -80,7 +63,7 @@ Note: You don't have to `import AES256CBC` if you install this way.
 
 Example which encrypts and decrypts a string using a randomly generated 32 character password. In real-life you would **add your own 32 character password** instead.
 
-``` Swift
+``` swift
 import AES256CBC
 
 let str = "My little secret"
@@ -103,6 +86,10 @@ If anything goes wrong, most likely due to a password which is not 32 characters
 ### What about the initial vector?
 
 You don’t need to worry about the important initial vector which is required to make AES-256 much more secure. AES256CBC automatically generates a random initial vector for you and adds it to the start of the encrypted string. During decryption AES256CBC reads the first 16 characters of the encrypted string and uses them as initial vector to decrypt the remaining encrypted string.
+
+### Where is it used?
+
+The framework is used in multiple projects of [SwiftyBeaver](https://github.com/SwiftyBeaver) and was developed in cooperation with Marcin Krzyżanowski from [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift).
 
 
 ## Contact & Contribute
