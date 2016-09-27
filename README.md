@@ -76,6 +76,15 @@ let encrypted = AES256CBC.encryptString(str, password: password)
 let decrypted = AES256CBC.decryptString(encrypted!, password: password)
 ```
 
+## Run on Ubuntu with Docker
+
+We ❤️ server-side Swift 3 and here is an example how to build & test AES256CBC in a Docker container on Ubuntu. Use the included Dockerfile:
+
+```shell
+docker build --rm -t aes256cbc .
+```
+
+
 ## FAQs
 
 ### Why do I get nil as result?
