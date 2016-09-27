@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7507996A1D9B1A00001A3FF7 /* AES256CBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750799691D9B1A00001A3FF7 /* AES256CBCTests.swift */; };
 		9E7D2A6E1C6A102A0089227F /* AES256CBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7D2A631C6A102A0089227F /* AES256CBC.framework */; };
-		9E7D2A731C6A102A0089227F /* AES256CBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A721C6A102A0089227F /* AES256CBCTests.swift */; };
 		9E7D2A871C6A126A0089227F /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
 		9E7D2A881C6A126A0089227F /* AES256CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7D2A861C6A126A0089227F /* AES256CBC.swift */; };
 		9E7D2A8E1C6A17FB0089227F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9E7D2A8D1C6A17E90089227F /* LICENSE */; };
@@ -29,10 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		750799691D9B1A00001A3FF7 /* AES256CBCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AES256CBCTests.swift; path = Tests/AES256CBCTests/AES256CBCTests.swift; sourceTree = SOURCE_ROOT; };
 		9E195B071C6B396700D924CB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E7D2A631C6A102A0089227F /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7D2A6D1C6A102A0089227F /* AES256CBCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AES256CBCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E7D2A721C6A102A0089227F /* AES256CBCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES256CBCTests.swift; sourceTree = "<group>"; };
 		9E7D2A741C6A102A0089227F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E7D2A7D1C6A110A0089227F /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		9E7D2A861C6A126A0089227F /* AES256CBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AES256CBC.swift; path = sources/AES256CBC.swift; sourceTree = "<group>"; };
@@ -84,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7507996B1D9B1A0F001A3FF7 /* AES256CBCTests */ = {
+			isa = PBXGroup;
+			children = (
+				750799691D9B1A00001A3FF7 /* AES256CBCTests.swift */,
+			);
+			name = AES256CBCTests;
+			sourceTree = "<group>";
+		};
 		9E7D2A591C6A102A0089227F = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +101,7 @@
 				9E7D2A8F1C6A184C0089227F /* README.md */,
 				9E195B071C6B396700D924CB /* Info.plist */,
 				9E7D2A851C6A123A0089227F /* sources */,
-				9E7D2A711C6A102A0089227F /* AES256CBCTests */,
+				9E7D2A711C6A102A0089227F /* Tests */,
 				9E7D2A641C6A102A0089227F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,12 +118,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9E7D2A711C6A102A0089227F /* AES256CBCTests */ = {
+		9E7D2A711C6A102A0089227F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				9E7D2A721C6A102A0089227F /* AES256CBCTests.swift */,
+				7507996B1D9B1A0F001A3FF7 /* AES256CBCTests */,
 				9E7D2A741C6A102A0089227F /* Info.plist */,
 			);
+			name = Tests;
 			path = AES256CBCTests;
 			sourceTree = "<group>";
 		};
@@ -374,8 +383,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7507996A1D9B1A00001A3FF7 /* AES256CBCTests.swift in Sources */,
 				9E7D2A881C6A126A0089227F /* AES256CBC.swift in Sources */,
-				9E7D2A731C6A102A0089227F /* AES256CBCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +574,7 @@
 		9E7D2A7B1C6A102A0089227F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = AES256CBCTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -576,7 +585,7 @@
 		9E7D2A7C1C6A102A0089227F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = AES256CBCTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftyBeaver.AES256CBCTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

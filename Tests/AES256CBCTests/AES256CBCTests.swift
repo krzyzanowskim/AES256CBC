@@ -126,4 +126,11 @@ class AES256CBCTests: XCTestCase {
         XCTAssertNil(pw2.range(of: " "))
     }
 
+    static let allTests =  [
+        ("testEncryptDecryptStringCycle", testEncryptDecryptStringCycle),
+        ("testEncryptString",testEncryptString),
+        ("testDecryptString",testDecryptString),
+        ("testRandomText",testRandomText),
+        ("testGeneratePassword",testGeneratePassword)
+    ]
 }
