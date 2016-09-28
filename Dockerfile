@@ -3,4 +3,4 @@ FROM swiftdocker/swift
 ENV PATH /usr/bin:$PATH
 RUN mkdir /app  
 COPY . /app  
-RUN cd /app && swift build
+RUN cd /app && swift build && swift test

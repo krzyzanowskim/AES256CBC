@@ -38,7 +38,10 @@
 		9E7D2A861C6A126A0089227F /* AES256CBC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AES256CBC.swift; path = sources/AES256CBC.swift; sourceTree = "<group>"; };
 		9E7D2A8D1C6A17E90089227F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9E7D2A8F1C6A184C0089227F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9EB17BBE1D9B99BE009736BE /* Dockerfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dockerfile; sourceTree = "<group>"; };
+		9EB17BBF1D9B99CC009736BE /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		9EBCC0091CA175E500F634FF /* AES256CBC.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AES256CBC.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9ECBFE1C1D9BA39F002CD48E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		AC3AC2751CA1AB5D00BBFC58 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3AC2821CA1ABC200BBFC58 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3AC28F1CA1AC3900BBFC58 /* AES256CBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AES256CBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,8 +99,11 @@
 			isa = PBXGroup;
 			children = (
 				9E7D2A7D1C6A110A0089227F /* .gitignore */,
+				9EB17BBF1D9B99CC009736BE /* .travis.yml */,
 				9EBCC0091CA175E500F634FF /* AES256CBC.podspec */,
+				9EB17BBE1D9B99BE009736BE /* Dockerfile */,
 				9E7D2A8D1C6A17E90089227F /* LICENSE */,
+				9ECBFE1C1D9BA39F002CD48E /* Package.swift */,
 				9E7D2A8F1C6A184C0089227F /* README.md */,
 				9E195B071C6B396700D924CB /* Info.plist */,
 				9E7D2A851C6A123A0089227F /* sources */,
