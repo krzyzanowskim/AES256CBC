@@ -9,7 +9,7 @@ The **most convenient** & lightweight **AES256 Encryption Framework for Swift 3*
 ## Unique Feature Set
 
 1. Just **a single file** in pure Swift 2 & 3 source code
-2. Runs **natively** on iOS, macOS, tvOS & watchOS
+2. Runs **natively** on iOS, macOS, tvOS & watchOS & *Linux*
 3. No additional dependencies or header files
 4. Maximum **convenience** for encrypting / decrypting of strings
 5. Built-in generating of compatible 32 character password
@@ -81,7 +81,12 @@ let decrypted = AES256CBC.decryptString(encrypted!, password: password)
 We ❤️ server-side Swift 3 and here is an example how to build & test AES256CBC in a Docker container on Ubuntu. Use the included Dockerfile:
 
 ```shell
+# create image and run container
 docker build --rm -t aes256cbc .
+docker run --rm -it -v $PWD:/app aes256cbc
+
+# build & run unit tests inside container
+cd /app && swift build && swift test
 ```
 
 
