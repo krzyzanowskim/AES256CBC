@@ -12,9 +12,27 @@
 // =================================================================================================
 
 import Foundation
+/*
 #if os(Linux)
     import CLibBSD_Linux
 #endif
+*/
+
+#if os(Linux)
+    import Glibc
+    import SwiftShims
+#else
+    import Darwin
+#endif
+
+// a cross-platform arc4random wrapper
+func arc4RandomUniform(_ upperBound: UInt32) -> UInt32 {
+    #if os(Linux)
+        return _swift_stdlib_cxx11_mt19937_uniform(upperBound)
+    #else
+        return arc4random_uniform(upperBound)
+    #endif
+}
 
 final public class AES256CBC {
 
@@ -87,11 +105,11 @@ final public class AES256CBC {
         func randomCharacter() -> UInt8 {
             switch self {
             case .LowerCase:
-                return UInt8(arc4random_uniform(26)) + 97
+                return UInt8(arc4RandomUniform(26)) + 97
             case .UpperCase:
-                return UInt8(arc4random_uniform(26)) + 65
+                return UInt8(arc4RandomUniform(26)) + 65
             case .Digit:
-                return UInt8(arc4random_uniform(10)) + 48
+                return UInt8(arc4RandomUniform(10)) + 48
             case .Space:
                 return 32
             }
@@ -101,7 +119,7 @@ final public class AES256CBC {
             if justLowerCase {
                 return .LowerCase
             } else {
-                return CharType(rawValue: Int(arc4random_uniform(allowWhitespace ? 4 : 3)))!
+                return CharType(rawValue: Int(arc4RandomUniform(allowWhitespace ? 4 : 3)))!
             }
         }
     }
