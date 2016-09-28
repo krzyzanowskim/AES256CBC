@@ -9,7 +9,7 @@ The **most convenient** & lightweight **AES256 Encryption Framework for Swift 3*
 ## Unique Feature Set
 
 1. Just **a single file** in pure Swift 2 & 3 source code
-2. Runs **natively** on iOS, macOS, tvOS & watchOS & *Linux*
+2. Runs **natively** on iOS, macOS, tvOS & watchOS & **Linux**
 3. No additional dependencies or header files
 4. Maximum **convenience** for encrypting / decrypting of strings
 5. Built-in generating of compatible 32 character password
