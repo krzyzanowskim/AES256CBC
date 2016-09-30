@@ -1,6 +1,6 @@
 # AES256CBC Encryption for Swift 2 & 3
 
-The **most convenient** & lightweight **AES256 Encryption Framework for Swift 3** ever! For Swift 2 use tag 0.1.1
+The **most convenient** & lightweight **AES256 Encryption Framework for Swift 3** which even **works under Linux**. For Swift 2 use tag 0.1.1.
 
 [![Language Swift 3](https://img.shields.io/badge/Language-Swift%202%20&%203-orange.svg)](https://developer.apple.com/swift) [![Travis Build Status](https://travis-ci.org/SwiftyBeaver/AES256CBC.svg)](https://travis-ci.org/SwiftyBeaver/AES256CBC) [![Slack Status](https://slack.swiftybeaver.com/badge.svg)](https://slack.swiftybeaver.com) 
 
@@ -20,7 +20,7 @@ Please **follow [SwiftyBeaver on Twitter](https://twitter.com/SwiftyBeaver)** to
 
 ## Requirements
 
-- iOS 8.0+, macOS X 10.9+, tvOS 9+, watchOS 2+
+- iOS 8.0+, macOS X 10.9+, tvOS 9+, watchOS 2+, Linux
 - Xcode 7+
 
 ## Installation

@@ -25,9 +25,9 @@ class AES256CBCTests: XCTestCase {
         let password = AES256CBC.randomText(32)
         let encrypted = AES256CBC.encryptString(str, password: password)
         XCTAssertNotNil(encrypted)
-        //NSLog("str: \(str)")
-        //NSLog("password: \(password)")
-        //NSLog("encrypted secret (IV is at first 16 chars): \(encrypted)")
+        //print("str: \(str)")
+        //print("password: \(password)")
+        //print("encrypted secret (IV is at first 16 chars): \(encrypted)")
         
         if let encrypted = encrypted {
             XCTAssertGreaterThan(encrypted.characters.count, 16)

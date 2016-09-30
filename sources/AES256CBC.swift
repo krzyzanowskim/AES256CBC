@@ -6,32 +6,83 @@
 //  Copyright © 2016 SwiftyBeaver. All rights reserved.
 //
 
-// =================================================================================================
-// ATTENTION:
-// Please read the copyright statement of the source code by Marcin Krzyżanowski further down below
-// =================================================================================================
 
 import Foundation
-/*
-#if os(Linux)
-    import CLibBSD_Linux
-#endif
-*/
 
-#if os(Linux)
-    import Glibc
-    import SwiftShims
-#else
-    import Darwin
-#endif
+/// cross-platform random numbers generator
+/// on Linux it uses /dev/urandom which is slow but secure
+final fileprivate class URandom {
 
-// a cross-platform arc4random wrapper
-func arc4RandomUniform(_ upperBound: UInt32) -> UInt32 {
+    /// returns an unsigned random number between 0 and an upperBound
+    /// which is 4294967295 (unsigned 32bit max) on default
+    class func generate(_ upperBound: UInt32 = UInt32.max) -> UInt32 {
+        #if os(Linux)
+            // use the optional upperBound value to
+            // decice on the bit amount of the result
+            var bytes = 1 // on default UInt64
+
+            if upperBound > UInt32(UInt8.max) {
+                // > 255
+                bytes = 2
+            }
+            if upperBound > UInt32(UInt16.max) {
+                // > 65535 < 4294967296
+                bytes = 4
+            }
+
+            // read from /dev/urandom
+            let bytesArg = "-N" + String(bytes)
+
+            let args = ["-An", bytesArg, "-D", "/dev/urandom"]
+            let output = URandom.shell("/usr/bin/od", args: args)
+
+            //print("upperBound: \(upperBound), bytes: \(bytesArg), output: \(output)")
+            if let randomNumber = UInt32(output) {
+                let ret = randomNumber % upperBound
+                //print("generated \(bytes) bytes random number (0 - \(upperBound)): \(ret)")
+                return ret
+            }
+            return 0
+        #else
+            return arc4random_uniform(upperBound)
+        #endif
+    }
+
     #if os(Linux)
-        return _swift_stdlib_cxx11_mt19937_uniform(upperBound)
-    #else
-        return arc4random_uniform(upperBound)
+        // runs a Shell command with arguments and returns the output or ""
+        class func shell(_ command: String, args: [String] = []) -> String {
+            let task = Task() // just works on Linux
+            // let task = Process() use this for Apple devices!
+            /*
+            #if os(Linux)
+                let task = Task()
+            #else
+                let task = Process()
+            #endif
+            */
+
+            task.launchPath = command
+            task.arguments = args
+
+            let pipe = Pipe()
+            task.standardOutput = pipe
+            task.launch()
+
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            let output: String? = String(data: data,
+                                         encoding: String.Encoding.utf8)
+            task.waitUntilExit()
+
+            if let output = output {
+                if !output.isEmpty {
+                    // remove whitespaces and newline from start and end
+                    return output.trimmingCharacters(in: .whitespacesAndNewlines)
+                }
+            }
+            return ""
+        }
     #endif
+
 }
 
 final public class AES256CBC {
@@ -49,7 +100,7 @@ final public class AES256CBC {
                 let ret = iv + encryptedString
                 return ret
             } catch let err as NSError {
-                NSLog(err.localizedDescription)
+                print(err.localizedDescription)
             }
         }
         return nil
@@ -69,7 +120,7 @@ final public class AES256CBC {
                 let decryptedString = try aesDecrypt(encryptedString, key: password, iv: iv)
                 return decryptedString
             } catch let err as NSError {
-                NSLog(err.localizedDescription)
+                print(err.localizedDescription)
             }
         }
         return nil
@@ -105,11 +156,11 @@ final public class AES256CBC {
         func randomCharacter() -> UInt8 {
             switch self {
             case .LowerCase:
-                return UInt8(arc4RandomUniform(26)) + 97
+                return UInt8(URandom.generate(26)) + 97
             case .UpperCase:
-                return UInt8(arc4RandomUniform(26)) + 65
+                return UInt8(URandom.generate(26)) + 65
             case .Digit:
-                return UInt8(arc4RandomUniform(10)) + 48
+                return UInt8(URandom.generate(10)) + 48
             case .Space:
                 return 32
             }
@@ -119,7 +170,7 @@ final public class AES256CBC {
             if justLowerCase {
                 return .LowerCase
             } else {
-                return CharType(rawValue: Int(arc4RandomUniform(allowWhitespace ? 4 : 3)))!
+                return CharType(rawValue: Int(URandom.generate(allowWhitespace ? 4 : 3)))!
             }
         }
     }
