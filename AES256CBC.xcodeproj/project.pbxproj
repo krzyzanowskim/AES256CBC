@@ -106,7 +106,7 @@
 				9ECBFE1C1D9BA39F002CD48E /* Package.swift */,
 				9E7D2A8F1C6A184C0089227F /* README.md */,
 				9E195B071C6B396700D924CB /* Info.plist */,
-				9E7D2A851C6A123A0089227F /* sources */,
+				9E7D2A851C6A123A0089227F /* Sources */,
 				9E7D2A711C6A102A0089227F /* Tests */,
 				9E7D2A641C6A102A0089227F /* Products */,
 			);
@@ -134,12 +134,12 @@
 			path = AES256CBCTests;
 			sourceTree = "<group>";
 		};
-		9E7D2A851C6A123A0089227F /* sources */ = {
+		9E7D2A851C6A123A0089227F /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				9E7D2A861C6A126A0089227F /* AES256CBC.swift */,
 			);
-			name = sources;
+			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
