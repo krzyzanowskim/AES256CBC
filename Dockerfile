@@ -1,6 +1,12 @@
-FROM swiftdocker/swift
-# Set Swift Path
-ENV PATH /usr/bin:$PATH
-RUN mkdir /app  
-COPY . /app  
-RUN cd /app && swift build && swift test
+# use the latest stable Swift 3
+FROM swift
+# use the latest Swift 3.1 beta
+#FROM swiftdocker/swift:swift-3.1
+
+WORKDIR /code 
+
+COPY Package.swift /code/
+COPY ./Sources /code/Sources
+COPY ./Tests /code/Tests
+
+RUN swift build
