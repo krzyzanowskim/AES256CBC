@@ -20,7 +20,7 @@ Please **follow [SwiftyBeaver on Twitter](https://twitter.com/SwiftyBeaver)** to
 
 ## Requirements
 
-- iOS 8.0+, macOS X 10.9+, tvOS 9+, watchOS 2+, Linux
+- iOS 8.0+, macOS X 10.9+, tvOS 9+, watchOS 2+, Linux, Docker
 - Xcode 7+
 
 ## Installation
@@ -78,17 +78,7 @@ let decrypted = AES256CBC.decryptString(encrypted!, password: password)
 
 ## Run on Ubuntu with Docker
 
-We ❤️ server-side Swift 3 and here is an example how to build & test AES256CBC in a Docker container on Ubuntu. Use the included Dockerfile:
-
-```shell
-# create image and run container
-docker build --rm -t aes256cbc .
-docker run --rm -it -v $PWD:/app aes256cbc
-
-# build & run unit tests inside container
-cd /app && swift build && swift test
-```
-
+We ❤️ server-side Swift 3 AES256CBC works under Linux. For Docker you can use the included Dockerfile or simple run `test.sh` which will create a self-removing docker container and runs test in them.
 
 ## FAQs
 
