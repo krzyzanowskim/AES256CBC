@@ -23,6 +23,9 @@ Packages
 !default.perspectivev3
 xcuserdata
 
+## Sublime
+*.sublime*
+
 ## Other
 *.xccheckout
 *.moved-aside
