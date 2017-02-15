@@ -50,7 +50,7 @@ final fileprivate class URandom {
     #if os(Linux)
         // runs a Shell command with arguments and returns the output or ""
         class func shell(_ command: String, args: [String] = []) -> String {
-            #if swift(>=3.0)
+            #if swift(>=3.1)
             let task = Process() // use this for Apple devices!
             #else
             let task = Task() // just works on Linux with Swift <3.1
