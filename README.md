@@ -78,7 +78,7 @@ let decrypted = AES256CBC.decryptString(encrypted!, password: password)
 
 ## Run on Ubuntu with Docker
 
-We ❤️ server-side Swift 3 AES256CBC works under Linux. For Docker you can use the included Dockerfile or simple run `test.sh` which will create a self-removing docker container and runs test in them.
+We ❤️ server-side Swift 3 AES256CBC works under Linux. For Docker you can use the included Dockerfile or simple run `test_in_docker.sh` which will create a self-removing docker container and runs test in them.
 
 ## FAQs
 

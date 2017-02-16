@@ -51,17 +51,10 @@ final fileprivate class URandom {
         // runs a Shell command with arguments and returns the output or ""
         class func shell(_ command: String, args: [String] = []) -> String {
             #if swift(>=3.1)
-            let task = Process() // use this for Apple devices!
+            let task = Process() // for Apple devices & Swift 3.1+ on Linux
             #else
             let task = Task() // just works on Linux with Swift <3.1
             #endif
-            /*
-            #if os(Linux)
-                let task = Task()
-            #else
-                let task = Process()
-            #endif
-            */
 
             task.launchPath = command
             task.arguments = args

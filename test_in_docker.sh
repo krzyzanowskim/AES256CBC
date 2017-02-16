@@ -9,4 +9,4 @@ echo "Running Tests in Docker Container"
 echo "================================="
 docker build -t aes256cbc .
 docker run --name aes256cbc_test --rm aes256cbc swift test
-echo "Finished, all containers were removed."
+echo "Finished tests, docker container were removed."
