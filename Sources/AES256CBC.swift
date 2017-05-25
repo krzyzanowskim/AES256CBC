@@ -185,7 +185,10 @@ final public class AES256CBC {
         let data = Data(base64Encoded: str)!
         let dec = try Data(bytes: AESCipher(key: keyData.bytes,
                                             iv: ivData.bytes).decrypt(bytes: data.bytes))
-        return String(data: dec, encoding: String.Encoding.utf8)!
+        guard let decryptStr = String(data: dec, encoding: String.Encoding.utf8) else {
+            throw NSError(domain: "Invalid utf8 data", code: 0, userInfo: nil)
+        }
+        return decryptStr
     }
 
 }
