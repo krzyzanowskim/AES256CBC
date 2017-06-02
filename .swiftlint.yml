@@ -21,11 +21,11 @@ opt_in_rules: # some rules are only opt-in
 disabled_rules: # rule identifiers to exclude from running
 - valid_docs   # /// is valid and used by Xcode
 - cyclomatic_complexity
-- variable_name
 - syntactic_sugar
 - type_body_length
 - function_body_length
 - file_length
+- identifier_name
 
 line_length: 150
 
