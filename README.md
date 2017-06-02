@@ -2,7 +2,7 @@
 
 The **most convenient** & lightweight **AES256 Encryption Framework for Swift 3** which even **works under Linux**. For Swift 2 use tag 0.1.1.
 
-[![Language Swift 3](https://img.shields.io/badge/Language-Swift%202%20&%203-orange.svg)](https://developer.apple.com/swift) [![CircleCI](https://circleci.com/gh/SwiftyBeaver/AES256CBC/tree/master.svg?style=shield)](https://circleci.com/gh/SwiftyBeaver/AES256CBC) [![Slack Status](https://slack.swiftybeaver.com/badge.svg)](https://slack.swiftybeaver.com) 
+<p align="center"><a href="https://swift.org" target="_blank"><img src="https://img.shields.io/badge/Language-Swift%202%20&%203-orange.svg" alt="Language Swift 3"></a> <a href="https://circleci.com/gh/SwiftyBeaver/AES256CBC" target="_blank"><img src="https://circleci.com/gh/SwiftyBeaver/AES256CBC/tree/master.svg?style=shield" alt="CircleCI"/></a> <a href="https://slack.swiftybeaver.com" target="_blank"><img src="https://img.shields.io/badge/Join-Our%20Slack%20Chat-blue.svg" alt="Slack Status"/></a>
 
 ----
 
