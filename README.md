@@ -1,21 +1,21 @@
-# AES256CBC Encryption for Swift 2 & 3
+# AES256CBC Encryption for Swift 2, 3 & 4
 
-The **most convenient** & lightweight **AES256 Encryption Framework for Swift 3** which even **works under Linux**. For Swift 2 use tag 0.1.1.
+The **most convenient** & lightweight **AES256 Encryption Framework for Swift 3 & 4** which even **works under Linux**. For Swift 2 use tag 0.1.1.
 
-<p align="center"><a href="https://swift.org" target="_blank"><img src="https://img.shields.io/badge/Language-Swift%202%20&%203-orange.svg" alt="Language Swift 3"></a> <a href="https://circleci.com/gh/SwiftyBeaver/AES256CBC" target="_blank"><img src="https://circleci.com/gh/SwiftyBeaver/AES256CBC/tree/master.svg?style=shield" alt="CircleCI"/></a> <a href="https://slack.swiftybeaver.com" target="_blank"><img src="https://img.shields.io/badge/Join-Our%20Slack%20Chat-blue.svg" alt="Slack Status"/></a>
+<p align="center"><a href="https://swift.org" target="_blank"><img src="https://img.shields.io/badge/Language-Swift%202,%203%20&%204-orange.svg" alt="Language Swift 3 & 4"></a> <a href="https://circleci.com/gh/SwiftyBeaver/AES256CBC" target="_blank"><img src="https://circleci.com/gh/SwiftyBeaver/AES256CBC/tree/master.svg?style=shield" alt="CircleCI"/></a> <a href="https://slack.swiftybeaver.com" target="_blank"><img src="https://img.shields.io/badge/Join-Our%20Slack%20Chat-blue.svg" alt="Slack Status"/></a>
 
 ----
 
 ## Unique Feature Set
 
-1. Just **a single file** in pure Swift 2 & 3 source code
+1. Just **a single file** in pure Swift 2, 3 & 4 source code
 2. Runs **natively** on iOS, macOS, tvOS & watchOS & **Linux**
 3. No additional dependencies or header files
 4. Maximum **convenience** for encrypting / decrypting of strings
 5. Built-in generating of compatible 32 character password
 6. Automatic string padding
 6. Automatic handling & embedding of a **random initialisation vector**
-   
+
 Please **follow [SwiftyBeaver on Twitter](https://twitter.com/SwiftyBeaver)** to stay up-to-date on new versions.
 
 ## Requirements
@@ -78,7 +78,7 @@ let decrypted = AES256CBC.decryptString(encrypted!, password: password)
 
 ## Run on Ubuntu with Docker
 
-We ❤️ server-side Swift 3 AES256CBC works under Linux. For Docker you can use the included Dockerfile or simple run `test_in_docker.sh` which will create a self-removing docker container and runs test in them.
+We ❤️ server-side Swift 3 & 4 AES256CBC works under Linux. For Docker you can use the included Dockerfile or simple run `test_in_docker.sh` which will create a self-removing docker container and runs test in them.
 
 ## FAQs
 
