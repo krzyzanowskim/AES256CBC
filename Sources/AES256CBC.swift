@@ -27,16 +27,15 @@ public struct Random {
     }
 }
 
-
 /// own Base64 implementation to fix Swift 3.1.x bug under Linux
 #if os(Linux)
     struct InvalidBase64: Error {}
-    
+
     struct Base64 {
         static func decode(_ string: String) throws -> [UInt8] {
             return try decode([UInt8](string.utf8))
         }
-        
+
         /// Decodes a Base64 encoded String into Data
         ///
         /// - throws: If the string isn't base64 encoded
@@ -60,105 +59,105 @@ public struct Random {
                 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64,
                 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64
             ]
-            
+
             let remainder = string.count % 4
             let length = (string.count - remainder) / 4
-            
+
             var decoded = [UInt8]()
             decoded.reserveCapacity(length)
-            
+
             var index = 0
             var i0: UInt8 = 0
             var i1: UInt8 = 0
             var i2: UInt8 = 0
             var i3: UInt8 = 0
-            
+
             while index &+ 4 < string.count {
                 i0 = lookupTable[numericCast(string[index])]
                 i1 = lookupTable[numericCast(string[index &+ 1])]
                 i2 = lookupTable[numericCast(string[index &+ 2])]
                 i3 = lookupTable[numericCast(string[index &+ 3])]
-                
+
                 if i0 > 63 || i1 > 63 || i2 > 63 || i3 > 63 {
                     throw InvalidBase64()
                 }
-                
+
                 decoded.append(i0 << 2 | i1 >> 4)
                 decoded.append(i1 << 4 | i2 >> 2)
                 decoded.append(i2 << 6 | i3)
                 index += 4
             }
-            
+
             if string.count &- index > 1 {
                 i0 = lookupTable[numericCast(string[index])]
                 i1 = lookupTable[numericCast(string[index &+ 1])]
-                
+
                 if i1 > 63 {
                     guard string[index] == 61 else {
                         throw InvalidBase64()
                     }
-                    
+
                     return decoded
                 }
-                
+
                 if i2 > 63 {
                     guard string[index &+ 2] == 61 else {
                         throw InvalidBase64()
                     }
-                    
+
                     return decoded
                 }
-                
+
                 decoded.append(i0 << 2 | i1 >> 4)
-                
+
                 if string.count &- index > 2 {
                     i2 = lookupTable[numericCast(string[index &+ 2])]
-                    
+
                     if i2 > 63 {
                         guard string[index &+ 2] == 61 else {
                             throw InvalidBase64()
                         }
-                        
+
                         return decoded
                     }
-                    
+
                     decoded.append(i1 << 4 | i2 >> 2)
-                    
+
                     if string.count &- index > 3 {
                         i3 = lookupTable[numericCast(string[index &+ 3])]
-                        
+
                         if i3 > 63 {
                             guard string[index &+ 3] == 61 else {
                                 throw InvalidBase64()
                             }
-                            
+
                             return decoded
                         }
-                        
+
                         decoded.append(i2 << 6 | i3)
                     }
                 }
             }
-            
+
             return decoded
         }
-        
+
         static func encode(_ data: [UInt8]) -> String {
             let base64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
             var encoded: String = ""
-            
+
             func appendCharacterFromBase(_ character: Int) {
                 encoded.append(base64[base64.index(base64.startIndex, offsetBy: character)])
             }
-            
+
             func byte(_ index: Int) -> Int {
                 return Int(data[index])
             }
-            
+
             let decodedBytes = data.map { Int($0) }
-            
+
             var i = 0
-            
+
             while i < decodedBytes.count - 2 {
                 appendCharacterFromBase((byte(i) >> 2) & 0x3F)
                 appendCharacterFromBase(((byte(i) & 0x3) << 4) | ((byte(i + 1) & 0xF0) >> 4))
@@ -166,10 +165,10 @@ public struct Random {
                 appendCharacterFromBase(byte(i + 2) & 0x3F)
                 i += 3
             }
-            
+
             if i < decodedBytes.count {
                 appendCharacterFromBase((byte(i) >> 2) & 0x3F)
-                
+
                 if i == decodedBytes.count - 1 {
                     appendCharacterFromBase(((byte(i) & 0x3) << 4))
                     encoded.append("=")
@@ -177,10 +176,10 @@ public struct Random {
                     appendCharacterFromBase(((byte(i) & 0x3) << 4) | ((byte(i + 1) & 0xF0) >> 4))
                     appendCharacterFromBase(((byte(i + 1) & 0xF) << 2))
                 }
-                
+
                 encoded.append("=")
             }
-            
+
             return encoded
         }
     }
@@ -210,8 +209,7 @@ final public class AES256CBC {
     public class func decryptString(_ str: String, password: String) -> String? {
         if str.characters.count > 16 && password.characters.count == 32 {
             // get AES initialization vector from first 16 chars
-            let ivRange = str.startIndex..<str.index(str.startIndex, offsetBy: 16)
-            let iv = str.substring(with: ivRange)
+            let iv = str.substring(to: str.index(str.startIndex, offsetBy: 16))
             let encryptedString = str.replacingOccurrences(of: iv, with: "",
                                                            options: String.CompareOptions.literal, range: nil) // remove IV
 
@@ -598,16 +596,24 @@ final private class AESCipher {
             var w: UInt32
 
             w = rk2[r][0]
-            rk2[r][0] = U1[Int(B0(w))] ^ U2[Int(B1(w))] ^ U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            let u1 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
+            let u2 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            rk2[r][0] = u1 ^ u2
 
             w = rk2[r][1]
-            rk2[r][1] = U1[Int(B0(w))] ^ U2[Int(B1(w))] ^ U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            let u11 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
+            let u12 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            rk2[r][1] = u11 ^ u12
 
             w = rk2[r][2]
-            rk2[r][2] = U1[Int(B0(w))] ^ U2[Int(B1(w))] ^ U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            let u22 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
+            let u23 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            rk2[r][2] = u22 ^ u23
 
             w = rk2[r][3]
-            rk2[r][3] = U1[Int(B0(w))] ^ U2[Int(B1(w))] ^ U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            let u33 = U1[Int(B0(w))] ^ U2[Int(B1(w))]
+            let u34 = U3[Int(B2(w))] ^ U4[Int(B3(w))]
+            rk2[r][3] = u33 ^ u34
         }
 
         return rk2
@@ -710,7 +716,12 @@ extension AESCipher {
         var p: UInt8 = 1, q: UInt8 = 1
 
         repeat {
+            #if swift(>=4.0)
+            p = p ^ (UInt8(extendingOrTruncating: Int(p) << 1) ^ ((p & 0x80) == 0x80 ? 0x1B : 0))
+            #else
             p = p ^ (UInt8(truncatingBitPattern: Int(p) << 1) ^ ((p & 0x80) == 0x80 ? 0x1B : 0))
+
+            #endif
             q ^= q << 1
             q ^= q << 2
             q ^= q << 4
@@ -832,7 +843,7 @@ private struct PKCS7 {
 
 // MARK: - Utils
 
-fileprivate func xor(_ a: Array<UInt8>, _ b: Array<UInt8>) -> Array<UInt8> {
+private func xor(_ a: Array<UInt8>, _ b: Array<UInt8>) -> Array<UInt8> {
     var xored = Array<UInt8>(repeating: 0, count: min(a.count, b.count))
     for i in 0..<xored.count {
         xored[i] = a[i] ^ b[i]
@@ -840,24 +851,27 @@ fileprivate func xor(_ a: Array<UInt8>, _ b: Array<UInt8>) -> Array<UInt8> {
     return xored
 }
 
-fileprivate func rotateLeft(_ value: UInt8, by: UInt8) -> UInt8 {
+private func rotateLeft(_ value: UInt8, by: UInt8) -> UInt8 {
     return ((value << by) & 0xFF) | (value >> (8 - by))
 }
 
-fileprivate func rotateLeft(_ value: UInt32, by: UInt32) -> UInt32 {
+private func rotateLeft(_ value: UInt32, by: UInt32) -> UInt32 {
     return ((value << by) & 0xFFFFFFFF) | (value >> (32 - by))
 }
 
-fileprivate protocol BitshiftOperationsType {
+private protocol BitshiftOperationsType {
     static func << (lhs: Self, rhs: Self) -> Self
 }
 
-fileprivate protocol ByteConvertible {
+private protocol ByteConvertible {
     init(_ value: UInt8)
     init(truncatingBitPattern: UInt64)
 }
 
+#if swift(>=4.0)
+#else
 extension UInt32 : BitshiftOperationsType, ByteConvertible { }
+#endif
 
 fileprivate extension UInt32 {
     init<T: Collection>(bytes: T) where T.Iterator.Element == UInt8, T.Index == Int {
@@ -869,7 +883,7 @@ fileprivate extension UInt32 {
     }
 }
 
-fileprivate func toUInt32Array(slice: ArraySlice<UInt8>) -> Array<UInt32> {
+private func toUInt32Array(slice: ArraySlice<UInt8>) -> Array<UInt32> {
     var result = Array<UInt32>()
     result.reserveCapacity(16)
     for idx in stride(from: slice.startIndex, to: slice.endIndex, by: MemoryLayout<UInt32>.size) {
@@ -886,7 +900,7 @@ fileprivate func toUInt32Array(slice: ArraySlice<UInt8>) -> Array<UInt32> {
 
 /// Array of bytes, little-endian representation. Don't use if not necessary.
 /// I found this method slow
-fileprivate func arrayOfBytes<T>(value: T, length: Int? = nil) -> Array<UInt8> {
+private func arrayOfBytes<T>(value: T, length: Int? = nil) -> Array<UInt8> {
     let totalBytes = length ?? MemoryLayout<T>.size
 
     let valuePointer = UnsafeMutablePointer<T>.allocate(capacity: 1)
@@ -905,6 +919,32 @@ fileprivate func arrayOfBytes<T>(value: T, length: Int? = nil) -> Array<UInt8> {
 }
 
 fileprivate extension Collection where Self.Iterator.Element == UInt8, Self.Index == Int {
+    #if swift(>=4.0)
+    func toInteger<T>() -> T where T: FixedWidthInteger {
+        if self.isEmpty {
+            return 0
+        }
+
+        let size = MemoryLayout<T>.size
+        var bytes = self.reversed()
+        if bytes.count < MemoryLayout<T>.size {
+            let paddingCount = MemoryLayout<T>.size - bytes.count
+            if paddingCount > 0 {
+                bytes += Array<UInt8>(repeating: 0, count: paddingCount)
+            }
+        }
+
+        if size == 1 {
+            return T(extendingOrTruncating: UInt64(bytes[0]))
+        }
+
+        var result: T = 0
+        for byte in bytes.reversed() {
+            result = result << 8 | T(byte)
+        }
+        return result
+    }
+    #else
     func toInteger<T: Integer>() -> T where T: ByteConvertible, T: BitshiftOperationsType {
         if self.isEmpty {
             return 0
@@ -928,6 +968,7 @@ fileprivate extension Collection where Self.Iterator.Element == UInt8, Self.Inde
         }
         return result
     }
+    #endif
 }
 
 fileprivate extension Array {
@@ -951,4 +992,3 @@ fileprivate extension Data {
         return Array(self)
     }
 }
-
