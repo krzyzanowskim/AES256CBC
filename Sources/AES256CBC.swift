@@ -717,7 +717,7 @@ extension AESCipher {
 
         repeat {
             #if swift(>=4.0)
-            p = p ^ (UInt8(extendingOrTruncating: Int(p) << 1) ^ ((p & 0x80) == 0x80 ? 0x1B : 0))
+            p = p ^ (UInt8(truncatingIfNeeded: Int(p) << 1) ^ ((p & 0x80) == 0x80 ? 0x1B : 0))
             #else
             p = p ^ (UInt8(truncatingBitPattern: Int(p) << 1) ^ ((p & 0x80) == 0x80 ? 0x1B : 0))
 
@@ -935,7 +935,7 @@ fileprivate extension Collection where Self.Iterator.Element == UInt8, Self.Inde
         }
 
         if size == 1 {
-            return T(extendingOrTruncating: UInt64(bytes[0]))
+            return T(truncatingIfNeeded: UInt64(bytes[0]))
         }
 
         var result: T = 0
