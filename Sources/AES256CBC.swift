@@ -992,3 +992,15 @@ fileprivate extension Data {
         return Array(self)
     }
 }
+
+extension String {
+    /// cross-Swift-version-compatible characters count
+    var count: Int {
+        #if swift(>=3.2)
+            return self.count
+        #else
+            return self.characters.count
+        #endif
+    }
+}
+
