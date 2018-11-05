@@ -203,6 +203,29 @@ final public class AES256CBC {
         }
         return nil
     }
+    
+    /// Function encrypting a string via AES-256CBC and a password 
+    /// - Parameters:
+    ///   - string: The string that is going to be encrypted
+    ///   - password: The password that shall be used for encryption
+    /// - Returns: an *optional tuple* with the ecryptedData and initialisation vector
+    public class func encrypt(string: String, password: String) -> (encryptedData: Data, IV: String)? {
+        guard string.isEmpty == false, password.length == 32 else {
+            return nil
+        }
+        
+        let iv = randomText(16)
+        let key = password
+        
+        let keyData = key.data(using: String.Encoding.utf8)!
+        let ivData = iv.data(using: String.Encoding.utf8)!
+        let data = string.data(using: String.Encoding.utf8)!
+        guard let enc = try? Data(bytes: AESCipher(key: keyData.bytes,
+                                                   iv: ivData.bytes).encrypt(bytes: data.bytes)) else {
+                                                    return nil
+        }
+        return (enc, iv)
+    }
 
     /// returns optional decrypted string via AES-256CBC
     /// IV need to be at first 16 chars, password must be 32 chars long
@@ -222,6 +245,24 @@ final public class AES256CBC {
         return nil
     }
 
+    /// Function decrypting string data via AES-256CBC
+    /// - Parameters:
+    ///   - data: The data is going to be decrypted
+    ///   - iv: Initialisation vector as Data
+    ///   - password: The password that shall be used for decryption
+    /// - Returns: an *optional string* with the decrypted data in utf8
+    public class func decryptString(_ data: Data, iv: Data, key: String) -> String? {
+        let keyData = key.data(using: String.Encoding.utf8)!
+        guard let decryptedData = try? Data(bytes: AESCipher(key: keyData.bytes,
+                                                   iv: iv.bytes).decrypt(bytes: data.bytes)) else {
+                return nil
+        }
+        guard let decryptedString = String(data: decryptedData, encoding: String.Encoding.utf8) else {
+            return nil
+        }
+        return decryptedString
+    }
+    
     /// returns random string (uppercase & lowercase, no spaces) of 32 characters length
     /// which can be used as SHA-256 compatbile password
     public class func generatePassword() -> String {
