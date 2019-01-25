@@ -232,7 +232,7 @@ final public class AES256CBC {
     public class func decryptString(_ str: String, password: String) -> String? {
         if str.length > 16 && password.length == 32 {
             // get AES initialization vector from first 16 chars
-            let iv = str.substring(to: str.index(str.startIndex, offsetBy: 16))
+            let iv = String(str.prefix(16))
             let encryptedString = str.replacingOccurrences(of: iv, with: "",
                                                            options: String.CompareOptions.literal, range: nil) // remove IV
 
@@ -331,13 +331,16 @@ final public class AES256CBC {
     fileprivate class func aesDecrypt(_ str: String, key: String, iv: String) throws -> String {
         let keyData = key.data(using: String.Encoding.utf8)!
         let ivData = iv.data(using: String.Encoding.utf8)!
-        let data = Data(base64Encoded: str)!
-        let dec = try Data(bytes: AESCipher(key: keyData.bytes,
-                                            iv: ivData.bytes).decrypt(bytes: data.bytes))
-        guard let decryptStr = String(data: dec, encoding: String.Encoding.utf8) else {
-            throw NSError(domain: "Invalid utf8 data", code: 0, userInfo: nil)
+        if let data = Data(base64Encoded: str) {
+            let dec = try Data(bytes: AESCipher(key: keyData.bytes,
+                                                iv: ivData.bytes).decrypt(bytes: data.bytes))
+            guard let decryptStr = String(data: dec, encoding: String.Encoding.utf8) else {
+                throw NSError(domain: "Invalid utf8 data", code: 0, userInfo: nil)
+            }
+            return decryptStr
+        } else {
+            return "error"
         }
-        return decryptStr
     }
 
 }
